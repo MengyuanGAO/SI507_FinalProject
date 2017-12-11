@@ -7,9 +7,8 @@ Furthermore, these data will be manipulated using Tableau and a well organised E
 
 ## Data Source
 Yelp is an application that provides information of restaurants and other kinds of stores. It allows people to search for restaurants in different locations and get information of a certain restaurant, including its' rating, reviews, phone number, address, etc. and also post their own reviews.
-This project will use Yelp Fusion API, which relies on industry standard OAuth 2.0 protocol for granting access.
+This project will use Yelp Fusion API, which relies on industry standard OAuth 2.0 protocol for granting access.Two kinds of APIs are used to get data in this project.
 * [Yelp Fusion API Documentation](https://www.yelp.com/developers/documentation/v3)
-Two kinds of APIs are used to get data in this project:
 * [Search API](https://www.yelp.com/developers/documentation/v3/business_search)
 * [Reviews API](https://www.yelp.com/developers/documentation/v3/business_reviews)
 
