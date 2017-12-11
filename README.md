@@ -34,8 +34,8 @@ There will be two csv files generated containing the information we get.
   * price: which price level they belong to, raning from $ to $$$
   * rating: the overall rating they get, raning from 1 to 5 with 1/2 interval
   * review_count: how many reviews they get
-  *:phone_number: their official phone number
-  *: address: their location in Ann Arbor
+  * phone_number: their official phone number
+  * address: their location in Ann Arbor
 
 
 * Ann Arbor_review.csv
@@ -58,7 +58,6 @@ There will be two tables stored in the database:
   * Address
 
 * Table2: Reviews
-  * User_Name
   * ID:PRIMARY KEY
   * User_Name
   * Rating
