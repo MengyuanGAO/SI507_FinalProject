@@ -17,8 +17,7 @@ Two kinds of APIs are used to get data in this project:
 ## Steps
 1. Preparation
 * This project use a version of Python 3.6.3 and all modules needed are stated in the requirements.txt file. Before run the code, you should pip install everything to requirements.txt.
-* Fill in your own key and secret in secret_data.py in order to run the code. You can create an App and find the right key and secret [here].
-[here]:https://www.yelp.com/developers/v3/manage_app
+* Fill in your own key and secret in secret_data.py in order to run the code. You can create an App and find the right key and secret here:https://www.yelp.com/developers/v3/manage_app
 
 2. Run the code-SI507F17_finalproject.py
 * Part-1: A cache system was set up to cache data getting from Yelp API and it will be stored in the file "cache_contents.json". 
@@ -28,61 +27,61 @@ Two kinds of APIs are used to get data in this project:
 * Part-5: Invoke all the functions.
 
 ## Outcomes
-###CSV files
+### CSV files
 There will be two csv files generated containing the information we get.
 * Ann Arbor.csv: this file contains the information of 50 restaurants in Ann Arbor(the maximum number we can get)
-...* name:restaurants' name
-...* category: which kind of restaurant they are
-...* price: which price level they belong to, raning from $ to $$$
-...* rating: the overall rating they get, raning from 1 to 5 with 1/2 interval
-...* review_count: how many reviews they get
-...*:phone_number: their official phone number
-...*: address: their location in Ann Arbor
+  * name:restaurants' name
+  * category: which kind of restaurant they are
+  * price: which price level they belong to, raning from $ to $$$
+  * rating: the overall rating they get, raning from 1 to 5 with 1/2 interval
+  * review_count: how many reviews they get
+  *:phone_number: their official phone number
+  *: address: their location in Ann Arbor
 
 
 * Ann Arbor_review.csv
-...* user_name:the name of user who provide this review
-...* rating: each user's own rating for this restaurant
-...* review: each user's review
-...* time_created: when this review was created
+  * user_name:the name of user who provide this review
+  * rating: each user's own rating for this restaurant
+  * review: each user's review
+  * time_created: when this review was created
 
 
-###Database
+### Database
 There will be two tables stored in the database:
 * Table1: Restaurants
-...* ID: PRIMARY KEY
-...* Name
-...* Category
-...* Price
-...* Rating
-...* Review_Count
-...* Phone_Number
-...* Address
+  * ID: PRIMARY KEY
+  * Name
+  * Category
+  * Price
+  * Rating
+  * Review_Count
+  * Phone_Number
+  * Address
 
 * Table2: Reviews
-...* User_Name
-...* ID:PRIMARY KEY
-...* User_Name
-...* Rating
-...* Review
-...* Time_Created
-...* Restaurant_ID: FOREIGN KEY points to Table1 Restaurants(ID)
+  * User_Name
+  * ID:PRIMARY KEY
+  * User_Name
+  * Rating
+  * Review
+  * Time_Created
+  * Restaurant_ID: FOREIGN KEY points to Table1 Restaurants(ID)
 
 
-###Data Visualisation
+### Data Visualisation
 All the data was processed with Tableau to make the data look more organised.
 * A set of Excel sheets to provide well organised information of restaurants in Ann Arbor
-...* Restaurants information grouping by Rating
-...* Restaurants information grouping by Price
-...* Restaurants information grouping by Category
-...* Each Restaurant's reviews sorted by Rating
+  * Restaurants information grouping by Rating
+  * Restaurants information grouping by Price
+  * Restaurants information grouping by Category
+  * Each Restaurant's reviews sorted by Rating
 In this way, people can pick any restaurant they prefer from different perspectives and have access to the reviews very easily.
 
 * Some graphs to show the structure of restaurants in Ann Arbor
-...* Number of restaurants grouping by price: we can see restaurants with $$ price are the most
-...* Number of restaurants grouping by rating: we can see that restaurants with a rating 3.5 are the most
-...* Number of restaurants grouping by price and rating
-...* Review counts of each restaurants: we can tell which restaurants are more popular 
+  * Number of restaurants grouping by price: we can see restaurants with $$ price are the most
+  * Number of restaurants grouping by rating: we can see that restaurants with a rating 3.5 are the most
+  * Number of restaurants grouping by price and rating
+  * Review counts of each restaurants: we can tell which restaurants are more popular 
 
 
 
