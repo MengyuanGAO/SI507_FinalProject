@@ -28,7 +28,7 @@ This project will use Yelp Fusion API, which relies on industry standard OAuth 2
 ## Outcomes
 ### CSV files
 There will be two csv files generated containing the information we get.
-* Ann Arbor.csv: this file contains the information of 50 restaurants in Ann Arbor(the maximum number we can get)
+* Ann Arbor.csv: this file contains the information of 50 restaurants in Ann Arbor(the maximum number we can get).
   * name:restaurants' name
   * category: which kind of restaurant they are
   * price: which price level they belong to, raning from $ to $$$
@@ -38,7 +38,7 @@ There will be two csv files generated containing the information we get.
   * address: their location in Ann Arbor
 
 
-* Ann Arbor_review.csv
+* Ann Arbor_review.csv:this file contains information of reviews for each of those 50 restaurants in Ann Arbor, 3 piece of review information are provided.
   * user_name:the name of user who provide this review
   * rating: each user's own rating for this restaurant
   * review: each user's review
