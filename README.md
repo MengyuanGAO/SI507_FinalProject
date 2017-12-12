@@ -24,6 +24,7 @@ This project will use Yelp Fusion API, which relies on industry standard OAuth 2
 * Part-3: Two classes(Restaurant and Review) are defined to stand for the information we want to obtain from a single restaurant and review. And methods are defined to extracted data and write data into csv files. For the Search API, location was entered as a parameter, we will focus on the restaurants in Ann Arbor in this project. For Reviews API, each restaurant we get from Search API, we will use its own Business ID as the parameter to get its reviews.
 * Part-4: Database was set up to store the data into it. Two tables are created(Restaurants and Reviews).
 * Part-5: Invoke all the functions.
+
 If everything is ready, when you run the code for the first time, you will it fetch new data from Yelp:
 ![alt text](imgs/1.png)
 
