@@ -14,13 +14,13 @@ This project will use Yelp Fusion API, which relies on industry standard OAuth 2
 
 
 ## Steps
-1. Preparation
+1. **Preparation**
 * This project use a version of Python 3.6.3 and all modules needed are stated in the requirements.txt file. Before run the code, you should pip install everything to requirements.txt.
 * Fill in your own key and secret in secret_data.py in order to run the code. You can create an App and find the right key and secret here:https://www.yelp.com/developers/v3/manage_app
 * Creat a database in pgAdmin4 and fill in your database name, user name and password in config.py in order to run the code.
 
 
-2. Run the code-SI507F17_finalproject.py
+2. **Run the code-SI507F17_finalproject.py**
 * Part-1: A cache system was set up to cache data getting from Yelp API and it will be stored in the file "cache_contents.json". 
 * Part-2: An OAuth system was set up to get authentication from Yelp API. 
 * Part-3: Two classes(Restaurant and Review) are defined to stand for the information we want to obtain from a single restaurant and review. And methods are defined to extracted data and write data into csv files. For the Search API, location was entered as a parameter, we will focus on the restaurants in Ann Arbor in this project. For Reviews API, each restaurant we get from Search API, we will use its own Business ID as the parameter to get its reviews.
@@ -32,6 +32,7 @@ If everything is ready, when you run the code for the first time, it will fetch 
 
 The next time you run the code, you will see it loads data from the cache_contents.json:
 ![alt text](imgs/4.png)
+
 
 ## Outcomes
 ### CSV files
