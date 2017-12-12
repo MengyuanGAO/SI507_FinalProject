@@ -17,6 +17,8 @@ This project will use Yelp Fusion API, which relies on industry standard OAuth 2
 1. Preparation
 * This project use a version of Python 3.6.3 and all modules needed are stated in the requirements.txt file. Before run the code, you should pip install everything to requirements.txt.
 * Fill in your own key and secret in secret_data.py in order to run the code. You can create an App and find the right key and secret here:https://www.yelp.com/developers/v3/manage_app
+* Creat a database in pgAdmin4 and fill in your database name, user name and password in config.py in order to run the code.
+
 
 2. Run the code-SI507F17_finalproject.py
 * Part-1: A cache system was set up to cache data getting from Yelp API and it will be stored in the file "cache_contents.json". 
