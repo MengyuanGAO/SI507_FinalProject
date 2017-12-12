@@ -283,8 +283,6 @@ def get_connection_and_cursor():
         db_cursor = db_connection.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
 
     return db_connection, db_cursor
-    print('Database Connected')
-
 conn, cur = get_connection_and_cursor()
 
 
@@ -357,7 +355,7 @@ if __name__ == "__main__":
         exit()
 
 # get a list of instances of Restaurant
-    restaurants = get_result_restaurants('Ann Arbor')
+    restaurants = get_result_restaurants('Ann Arbor') # a list of dictionaries 
     restaurants_list = []
     review_list = []
     for restaurant_dict in restaurants:
