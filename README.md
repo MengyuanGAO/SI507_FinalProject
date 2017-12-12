@@ -42,6 +42,7 @@ There will be two csv files generated containing the information we get.
   * review_count: how many reviews they get
   * phone_number: their official phone number
   * address: their location in Ann Arbor
+
 The CSV files should look like this:
 ![alt text](imgs/3.png)
 
@@ -50,6 +51,7 @@ The CSV files should look like this:
   * rating: each user's own rating for this restaurant
   * review: each user's review
   * time_created: when this review was created
+
 The CSV files should look like this:
 ![alt text](imgs/3.png)
 
@@ -64,6 +66,7 @@ There will be two tables stored in the database:
   * Review_Count
   * Phone_Number
   * Address
+
 Table1 should look like this:
 ![alt text](imgs/5.png)
 
@@ -74,6 +77,7 @@ Table1 should look like this:
   * Review
   * Time_Created
   * Restaurant_ID: FOREIGN KEY points to Table1 Restaurants(ID)
+
 Table2 should look like this:
 ![alt text](imgs/6.png)
 
