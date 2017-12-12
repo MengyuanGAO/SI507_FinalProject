@@ -25,7 +25,7 @@ This project will use Yelp Fusion API, which relies on industry standard OAuth 2
 * Part-4: Database was set up to store the data into it. Two tables are created(Restaurants and Reviews).
 * Part-5: Invoke all the functions.
 
-If everything is ready, when you run the code for the first time, you will it fetch new data from Yelp:
+If everything is ready, when you run the code for the first time, it will fetch new data from Yelp:
 ![alt text](imgs/1.png)
 
 The next time you run the code, you will see it loads data from the cache_contents.json:
