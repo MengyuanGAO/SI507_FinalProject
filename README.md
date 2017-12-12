@@ -24,6 +24,10 @@ This project will use Yelp Fusion API, which relies on industry standard OAuth 2
 * Part-3: Two classes(Restaurant and Review) are defined to stand for the information we want to obtain from a single restaurant and review. And methods are defined to extracted data and write data into csv files. For the Search API, location was entered as a parameter, we will focus on the restaurants in Ann Arbor in this project. For Reviews API, each restaurant we get from Search API, we will use its own Business ID as the parameter to get its reviews.
 * Part-4: Database was set up to store the data into it. Two tables are created(Restaurants and Reviews).
 * Part-5: Invoke all the functions.
+If everything is ready, when you run the code for the first time, you will it fetch new data from Yelp:
+![alt text](imgs/1.PNG)
+The next time you run the code, you will see it loads data from the cache_contents.json:
+![alt text](imgs/4.PNG)
 
 ## Outcomes
 ### CSV files
@@ -36,14 +40,16 @@ There will be two csv files generated containing the information we get.
   * review_count: how many reviews they get
   * phone_number: their official phone number
   * address: their location in Ann Arbor
-
+The CSV files should look like this:
+![alt text](imgs/3.PNG)
 
 * Ann Arbor_review.csv:this file contains information of reviews for each of those 50 restaurants in Ann Arbor, 3 piece of review information are provided.
   * user_name:the name of user who provide this review
   * rating: each user's own rating for this restaurant
   * review: each user's review
   * time_created: when this review was created
-
+The CSV files should look like this:
+![alt text](imgs/3.PNG)
 
 ### Database
 There will be two tables stored in the database:
@@ -56,6 +62,8 @@ There will be two tables stored in the database:
   * Review_Count
   * Phone_Number
   * Address
+Table1 should look like this:
+![alt text](imgs/5.PNG)
 
 * Table2: Reviews
   * ID:PRIMARY KEY
@@ -64,7 +72,8 @@ There will be two tables stored in the database:
   * Review
   * Time_Created
   * Restaurant_ID: FOREIGN KEY points to Table1 Restaurants(ID)
-
+Table2 should look like this:
+![alt text](imgs/6.PNG)
 
 ### Data Visualisation
 All the data was processed with Tableau to make the data look more organised.
@@ -82,6 +91,7 @@ In this way, people can pick any restaurant they prefer from different perspecti
   * Review counts of each restaurants: we can tell which restaurants are more popular 
 
 
-
+#### P.S:
+Thanks for Anand's help with the Yelp Authentication. 
 
 
