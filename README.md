@@ -25,9 +25,10 @@ This project will use Yelp Fusion API, which relies on industry standard OAuth 2
 * Part-4: Database was set up to store the data into it. Two tables are created(Restaurants and Reviews).
 * Part-5: Invoke all the functions.
 If everything is ready, when you run the code for the first time, you will it fetch new data from Yelp:
-![alt text](imgs/1.PNG)
+![alt text](imgs/1.png)
+
 The next time you run the code, you will see it loads data from the cache_contents.json:
-![alt text](imgs/4.PNG)
+![alt text](imgs/4.png)
 
 ## Outcomes
 ### CSV files
@@ -41,7 +42,7 @@ There will be two csv files generated containing the information we get.
   * phone_number: their official phone number
   * address: their location in Ann Arbor
 The CSV files should look like this:
-![alt text](imgs/3.PNG)
+![alt text](imgs/3.png)
 
 * Ann Arbor_review.csv:this file contains information of reviews for each of those 50 restaurants in Ann Arbor, 3 piece of review information are provided.
   * user_name:the name of user who provide this review
@@ -49,7 +50,7 @@ The CSV files should look like this:
   * review: each user's review
   * time_created: when this review was created
 The CSV files should look like this:
-![alt text](imgs/3.PNG)
+![alt text](imgs/3.png)
 
 ### Database
 There will be two tables stored in the database:
@@ -63,7 +64,7 @@ There will be two tables stored in the database:
   * Phone_Number
   * Address
 Table1 should look like this:
-![alt text](imgs/5.PNG)
+![alt text](imgs/5.png)
 
 * Table2: Reviews
   * ID:PRIMARY KEY
@@ -73,7 +74,7 @@ Table1 should look like this:
   * Time_Created
   * Restaurant_ID: FOREIGN KEY points to Table1 Restaurants(ID)
 Table2 should look like this:
-![alt text](imgs/6.PNG)
+![alt text](imgs/6.png)
 
 ### Data Visualisation
 All the data was processed with Tableau to make the data look more organised.
