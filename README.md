@@ -14,20 +14,25 @@ This project will use Yelp Fusion API, which relies on industry standard OAuth 2
 
 
 ## Steps
-1. Preparation
+1. **Preparation**
 * This project use a version of Python 3.6.3 and all modules needed are stated in the requirements.txt file. Before run the code, you should pip install everything to requirements.txt.
 * Fill in your own key and secret in secret_data.py in order to run the code. You can create an App and find the right key and secret here:https://www.yelp.com/developers/v3/manage_app
+* Creat a database in pgAdmin4 and fill in your database name, user name and password in config.py in order to run the code.
 
-2. Run the code-SI507F17_finalproject.py
+
+2. **Run the code-SI507F17_finalproject.py**
 * Part-1: A cache system was set up to cache data getting from Yelp API and it will be stored in the file "cache_contents.json". 
 * Part-2: An OAuth system was set up to get authentication from Yelp API. 
 * Part-3: Two classes(Restaurant and Review) are defined to stand for the information we want to obtain from a single restaurant and review. And methods are defined to extracted data and write data into csv files. For the Search API, location was entered as a parameter, we will focus on the restaurants in Ann Arbor in this project. For Reviews API, each restaurant we get from Search API, we will use its own Business ID as the parameter to get its reviews.
 * Part-4: Database was set up to store the data into it. Two tables are created(Restaurants and Reviews).
 * Part-5: Invoke all the functions.
-If everything is ready, when you run the code for the first time, you will it fetch new data from Yelp:
-![alt text](imgs/1.PNG)
+
+If everything is ready, when you run the code for the first time, it will fetch new data from Yelp:
+![alt text](imgs/1.png)
+
 The next time you run the code, you will see it loads data from the cache_contents.json:
-![alt text](imgs/4.PNG)
+![alt text](imgs/4.png)
+
 
 ## Outcomes
 ### CSV files
@@ -40,16 +45,18 @@ There will be two csv files generated containing the information we get.
   * review_count: how many reviews they get
   * phone_number: their official phone number
   * address: their location in Ann Arbor
+
 The CSV files should look like this:
-![alt text](imgs/3.PNG)
+![alt text](imgs/3.png)
 
 * Ann Arbor_review.csv:this file contains information of reviews for each of those 50 restaurants in Ann Arbor, 3 piece of review information are provided.
   * user_name:the name of user who provide this review
   * rating: each user's own rating for this restaurant
   * review: each user's review
   * time_created: when this review was created
+
 The CSV files should look like this:
-![alt text](imgs/3.PNG)
+![alt text](imgs/3.png)
 
 ### Database
 There will be two tables stored in the database:
@@ -62,8 +69,9 @@ There will be two tables stored in the database:
   * Review_Count
   * Phone_Number
   * Address
+
 Table1 should look like this:
-![alt text](imgs/5.PNG)
+![alt text](imgs/5.png)
 
 * Table2: Reviews
   * ID:PRIMARY KEY
@@ -72,8 +80,9 @@ Table1 should look like this:
   * Review
   * Time_Created
   * Restaurant_ID: FOREIGN KEY points to Table1 Restaurants(ID)
+
 Table2 should look like this:
-![alt text](imgs/6.PNG)
+![alt text](imgs/6.png)
 
 ### Data Visualisation
 All the data was processed with Tableau to make the data look more organised.

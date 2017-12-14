@@ -1,3 +1,3 @@
-db_name = 'gaomy_507FinalProject'
-db_user = 'mengyuangao'
-db_password = 'sophie1992'
+db_name = 'input your database name here'
+db_user = 'input your database user name here'
+db_password = 'input your database password here if you have any'
