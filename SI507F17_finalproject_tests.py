@@ -10,6 +10,22 @@ review_list = []
 for restaurant_dict in restaurants:
     restaurants_list.append(Restaurant(restaurant_dict))
 
+conn, cur = get_connection_and_cursor()
+setup_database()
+        
+for rt in restaurants_list:
+    insert(conn, cur, "Restaurants", rt.get_restaurant_diction())
+    cur.execute(""" SELECT "ID" FROM "Restaurants" WHERE "Name"=%s""", (rt.name,))
+    restaurant_result = cur.fetchone()
+    restaurant_db_id = restaurant_result["ID"]
+
+    for review_dict in get_result_reviews(rt.restaurant_id):
+        rw = Review(review_dict)
+        review_list.append(rw)
+        insert(conn, cur, "Reviews", rw.get_review_diction(restaurant_db_id))
+
+conn.commit()
+
 
 class Test_Yelp_API(unittest.TestCase):
 
@@ -51,14 +67,11 @@ class Test_Yelp_API(unittest.TestCase):
 
 
     def test_get_result_reviews_success(self):
-        for rt in restaurants_list:
-            for review_dict in get_result_reviews(rt.restaurant_id):
-                rw = Review(review_dict)
-                self.assertIsInstance(rw,Review)
-                self.assertIsInstance(rw.user_name, str)
-                self.assertIsInstance(rw.rating, int)
-                self.assertIsInstance(rw.review, str)
-                self.assertIsInstance(rw.time_created, str)
+        self.assertIsInstance(rw,Review)
+        self.assertIsInstance(rw.user_name, str)
+        self.assertIsInstance(rw.rating, int)
+        self.assertIsInstance(rw.review, str)
+        self.assertIsInstance(rw.time_created, str)
 
 
     def test_write_to_csv_success(self):
@@ -72,10 +85,7 @@ class Test_Yelp_API(unittest.TestCase):
 
 
     def test_get_review_diction(self):
-        for rt in restaurants_list:
-            for review_dict in get_result_reviews(rt.restaurant_id):
-                rw = Review(review_dict)
-                self.assertIsInstance(rw.get_review_diction(rt.restaurant_id), dict)
+        self.assertIsInstance(rw.get_review_diction(rt.restaurant_id), dict)
 
 
     @classmethod
@@ -88,30 +98,21 @@ class Test_Yelp_API(unittest.TestCase):
 class Test_Yelp_Database(unittest.TestCase):
 
     def setUp(self):
-        conn, cur = get_connection_and_cursor()
-        setup_database()
-        
-        for rt in restaurants_list:
-            insert(conn, cur, "Restaurants", rt.get_restaurant_diction())
-            cur.execute(""" SELECT "ID" FROM "Restaurants" WHERE "Name"=%s""", (rt.name,))
-            restaurant_result = cur.fetchone()
-            restaurant_db_id = restaurant_result["ID"]
-
-            for review_dict in get_result_reviews(rt.restaurant_id):
-                rw = Review(review_dict)
-                review_list.append(rw)
-                insert(conn, cur, "Reviews", rw.get_review_diction(restaurant_db_id))
-
-        conn.commit()
+        pass
    
 
-    def test_restaurants_db(self):
+    def test_restaurants_name(self):
         cur.execute("""SELECT "Name" FROM "Restaurants" """)
         location = cur.fetchone()["Name"]
         self.assertIsInstance(location, str)
+
+    def test_restaurants_rating(self):
+        cur.execute("""SELECT "Rating" FROM "Restaurants" """)
+        rating = cur.fetchone()["Rating"]
+        self.assertIsInstance(rating, float)
         
 
-    def test_review_db(self):
+    def test_reviews_db(self):
         cur.execute("""SELECT "User_Name" FROM "Reviews" """)
         user_name = cur.fetchone()["User_Name"]
         self.assertIsInstance(user_name, str)
