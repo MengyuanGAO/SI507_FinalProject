@@ -1,4 +1,4 @@
-# SI507 Final Project
+# Yelp Fusion API Project
 
 ## Summary of the Project
 This project aims to write python codes to get data from Yelp Fusion API about the restaurants information in Ann Arbor and then stored data into database.
